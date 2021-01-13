@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul v-for="(items,index) in data" v-show="num>=index">
+            <li>宇宙唯一id: {{items._id}}</li>
+            <li>用户名: {{items.username}}</li>
+            <li> 年龄: {{items.age}}</li>
+        </ul>
+        <button @click='nextone'>显示下一个用户信息</button>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+<script src="./main.js"></script>
+
+</html>
